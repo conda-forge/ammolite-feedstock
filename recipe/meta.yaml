@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/biotite-dev/ammolite/archive/v{{ version }}.tar.gz
-  sha256: d3abb9e1c82aed9d01aced449723f667c69175a16b5812cf48d5cb21ae34595f
+  sha256: 83b9c72854d7742de13ee11e734b11940f51be9f108f2f0850b0907bded33711
 
 build:
   number: {{ number }}
