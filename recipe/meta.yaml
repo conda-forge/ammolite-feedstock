@@ -1,4 +1,4 @@
-{% set version = "0.4.1" %}
+{% set version = "0.5.0" %}
 {% set number = "0" %}
 
 package:
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://github.com/biotite-dev/ammolite/archive/v{{ version }}.tar.gz
-  sha256: adbbf88611222503fe39c3831591e59fe2637c78c8547b40e62d62ad69e692e5
+  sha256: d3abb9e1c82aed9d01aced449723f667c69175a16b5812cf48d5cb21ae34595f
 
 build:
   number: {{ number }}
-  script: "{{ PYTHON }} -m pip install . -vv"
-  skip: True  # [py < 37]
-  skip: True  # [osx]
+  script: {{ PYTHON }} -m pip install . -vv
+  skip: true  # [py < 37]
+  skip: true  # [osx]
 
 requirements:
   host:
@@ -29,14 +29,14 @@ test:
   files:
     - test.py
   commands:
-    - "python test.py"
+    - python test.py
 
 about:
-  home: "https://ammolite.biotite-python.org"
+  home: https://ammolite.biotite-python.org
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: "Visualize structure data from Biotite with PyMOL"
+  summary: Visualize structure data from Biotite with PyMOL
   doc_url: https://ammolite.biotite-python.org
   dev_url: https://github.com/biotite-dev/ammolite
 
