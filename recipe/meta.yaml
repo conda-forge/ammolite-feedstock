@@ -1,4 +1,4 @@
-{% set version = "0.5.0" %}
+{% set version = "0.6.0" %}
 {% set number = "1" %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/biotite-dev/ammolite/archive/v{{ version }}.tar.gz
-  sha256: 83b9c72854d7742de13ee11e734b11940f51be9f108f2f0850b0907bded33711
+  sha256: 1751e28e2515842d5b3d2f8365ab5f8942602c7ebbf7db30094d65fa73e4d685
 
 build:
   number: {{ number }}
