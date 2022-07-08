@@ -1,5 +1,5 @@
 {% set version = "0.8.0" %}
-{% set number = "1" %}
+{% set number = "2" %}
 
 package:
   name: ammolite
@@ -12,16 +12,15 @@ source:
 build:
   number: {{ number }}
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [py < 37]
-  skip: true  # [osx]
+  noarch: python
 
 requirements:
   host:
-    - python
+    - python >=3.7
     - pip
     - poetry
   run:
-    - python
+    - python >=3.7
     - biotite >=0.22
     - pymol-open-source
 
